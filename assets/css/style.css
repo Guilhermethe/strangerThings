@@ -1,0 +1,520 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+@font-face {
+    font-family: 'Benguiat';
+    src: url(../fontes/Benguiat\ Bold.ttf);
+}
+:root{
+    --color1:#0C0102;
+    --color2:#630301;
+    --color3:#D9D9D9;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: var(--color1);
+    color: var(--color3);
+}
+
+
+/*FORMATAÇÃO PADRÃO*/
+.container1,
+.container2{
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container1{
+    max-width: 1800px;
+}
+.container2{
+    max-width: 1580px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #D9D9D9;
+    width: 216px;
+    padding: 14px 0;
+    border: none;
+    border-bottom: 1px solid var(--color3);
+    gap: 15px;
+    cursor: pointer;
+    transition: .2s;
+
+    span{
+        text-transform: uppercase;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+    img{
+        height: 12px;
+    }
+    &:hover{
+        gap: 25px;
+    }
+}
+
+
+/*HEADER*/
+header{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+    .hdLinks{
+        position: absolute;
+        top: 70px;
+        z-index: 3;
+    }
+    .hdLinks a{
+    font-size: 22px;
+    color: var(--color3);
+    font-weight: bold;
+    transition: .3s;
+    }
+    .hdLinks img{
+        transition: .3s;
+    }
+    .hdLinks a:hover{
+        text-shadow: 0 0 4px var(--color3);
+    }
+    .hdLinks a:hover img{
+        filter: drop-shadow(0 0 4px #D9D9D9);
+    }
+}
+
+
+
+section.main{
+    display: flex;
+    justify-content: center;
+    width: 100dvw;
+    height: 100dvh;
+    position: relative;
+    z-index: 1;
+}
+section.main picture{
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+section.main picture img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+section.main::after{
+    content: '';
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%);
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+section.main .container2{
+    position: absolute;
+    top: 312px;
+    z-index: 3;
+    user-select: none;
+    display: flex;
+    align-items: flex-start;
+}
+section.main .hdEsq{
+    h3{
+        text-transform: uppercase;  
+        /* font-size: 30px; */
+        font-size: clamp(20px, 3dvw, 30px);
+        font-weight: 600;
+        letter-spacing: 10px;
+    }
+    h1{
+        text-transform: uppercase;
+        font-family: 'benguiat';
+        /* font-size: 52px; */
+        font-size: clamp(50px, 7dvw, 72px);
+        line-height: clamp(50px, 7dvw, 72px);
+        /* line-height: 55px; */
+        margin-top: 10px;
+    }
+}
+section.main .hdDir{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    p{
+        /* font-size: 28px; */
+        font-size: clamp(18px, 5vw, 28px);
+        line-height: 35px;
+        text-align: end;
+        margin-bottom: 36px;
+        width: 100%;
+        max-width: 364px;
+    }
+}
+
+
+/*SECTION CIDADES*/
+section.cidades{
+    position: relative;
+    z-index: 3;
+    background-color: var(--color1);
+}
+section.cidades .container2{
+    user-select: none;
+    padding: 46px 20px 29px 20px;
+    
+    h4{
+        text-transform: uppercase;
+        /* font-size: 28px; */
+        font-size: clamp(18px, 5vw, 28px);
+        font-weight: 500;
+        letter-spacing: 3px;
+    }
+}
+
+section.cards{
+    background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%), url(../imgs/bg-sec2.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 220px;
+}
+section.cards .container2{
+    gap: 50px;
+}
+section.cards .card{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    width: 100%;
+    height: 314px;
+    box-shadow: 0 0 4px var(--color2);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    color: var(--color3);
+
+    h4{
+        font-size: 18px;
+    }
+    span{
+        font-size: 14px;
+    }
+}
+section.cards .card:nth-child(1){
+    background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%), url(../imgs/card1.webp);
+}
+section.cards .card:nth-child(2){
+    background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%), url(../imgs/card2.webp);
+}
+section.cards .card:nth-child(3){
+    background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%), url(../imgs/card3.webp);
+}
+section.cards .areaCards{
+    padding-bottom: 192px;
+}
+section.depoimentos .empresas{
+    margin-bottom: 50px;
+    
+    a{
+        transition:.3s;
+    }
+    a:hover{
+        filter: drop-shadow(0 0 4px #D9D9D9);
+    }
+}
+section.depoimentos .depTxt{
+    
+    .dep{
+        img{
+            margin-bottom: 20px;
+        }
+        p{
+            text-align: justify;
+            font-size: 16px;
+        }
+    }
+}
+section.obrigado{
+    flex-direction: column;
+    padding-bottom: 220px;
+    user-select: none;
+    align-items: flex-start;
+    
+    position: relative;
+    z-index: 3;
+    background-color: var(--color1);
+
+    h4{
+        font-size: 30px;
+        margin-bottom: 76px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .lista{
+        display: flex;
+        overflow: hidden;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        /* animation: txtanime infinite linear 10s; */
+    li{
+        display: flex;
+        justify-content: center;
+        width: 143.63px;
+    }
+    }
+}
+footer{
+    padding: 174px 0 48px 0;
+    background:url(../imgs/bg-footer.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+footer .container2{
+    align-items: flex-end;
+    margin-bottom: 156px;
+}
+footer .fEsq{
+    h3{
+        text-transform: uppercase;  
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 10px;
+    }
+    h2{
+        text-transform: uppercase;
+        font-family: 'benguiat';
+        font-size: 42px;
+        line-height: 45px;
+        margin-top: 10px;
+    }
+}
+footer .container2 .fDir{
+    display: flex;
+    align-items: flex-end;
+    gap: 76px;
+}
+footer .sociais{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    span{
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .redes{
+        display: flex;
+        gap: 10px;
+    }
+    .list{
+        flex-direction: column;
+        gap: 5px;
+
+        a{
+            color: var(--color3);
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+footer .container1{
+    margin-bottom: 40px;
+
+    a{
+        transition:.3s;
+
+        &:hover{
+            filter: drop-shadow(0 0 4px #D9D9D9);
+        }
+    }
+}
+footer .txtAnimado{
+    width: max-content;
+    display: flex;
+
+    h3{
+        color: rgb(191, 191, 191);
+        font-size: 12vw;
+        text-transform: uppercase;
+        padding-right: 8vw;
+        font-family: 'benguiat';
+        mix-blend-mode: color-dodge;
+        animation: txtanime infinite linear 10s;
+    }
+}
+#preloader{
+  width: 100%;
+  height: 100vh;
+  background-color: #0c0102;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  svg{
+    width: 40vw;
+    height: auto;
+
+    path{
+      fill: rgba(168, 19, 19, 0.364);
+      stroke: rgb(168, 19, 19);
+      stroke-dasharray: 640;
+      stroke-dashoffset: 640;
+    }
+  }
+}
+
+
+@keyframes txtanime{
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@media screen and (max-width:1650px) {
+    section.obrigado ul{
+        animation: txtanime infinite linear 15s;
+    }
+}
+@media screen and (max-width:1520px) {
+    section .cards .card{
+        flex-direction: column;
+        align-items: flex-start;
+
+        span{
+            width: 100%;
+            text-align: right;
+        }
+    }
+}
+@media screen and (max-width:1300px) {
+    section.cards .areaCards{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    section.cards .card{
+        width: 100%;
+        max-width: 490px;
+    }
+}
+@media screen and (max-width:1069px) {
+    section.depoimentos .depTxt{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    section.depoimentos .depTxt .dep{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 800px;
+    }
+}
+@media screen and (max-width:970px) {
+    footer .container2{
+        flex-direction: column;
+    }
+    footer .fEsq{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    section.obrigado h4{
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width:812px) {
+    section.main .container2{
+        flex-direction: column;
+        align-items: center;
+        top: 200px;
+        bottom: 100px;
+    }
+    section.main .hdDir{
+        align-items: center;
+    }
+    section.main .hdDir p{
+        text-align: left;
+    }
+}
+@media screen and (max-width:600px) {
+    footer .container2 .fDir{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:658px) {
+    section.cidades .container2{
+        flex-direction: column;
+
+        h4{
+            margin-bottom: 20px;
+        }
+    }
+}
+@media screen and (max-width:570px) {
+    section.depoimentos .empresas{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    section.obrigado h4{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:416px) {
+    section.main .container2{
+        top: 150px;
+    }
+    section.main .hdEsq h3{
+        font-size: 25px;
+        letter-spacing: 12px;
+    }
+    section.main .hdDir p{
+        text-align: center;
+    }
+    section.main .hdEsq h1{
+        text-align: center;
+    }
+    section.cards{
+        padding-bottom: 105px;
+    }
+    section.obrigado{
+        padding-bottom: 125px;
+    }
+    footer .sociais{
+        width: 100%;
+    }
+    footer .txtAnimado h3{
+        font-size: 34vw;
+    }
+}
