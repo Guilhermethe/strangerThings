@@ -441,6 +441,9 @@ footer .txtAnimado{
     }
 }
 @media screen and (max-width:970px) {
+    section.main .container2{
+        top: 35%;
+    }
     footer .container2{
         flex-direction: column;
     }
